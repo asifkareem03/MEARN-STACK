@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+.row img{
+    margin-top: 10px;
+    width:100%;
+    height:250px;
+    /* border-radius: 10%; */
+}
+span{
+    font-weight:bold;
+}
+h2{
+    margin-top: 10px;
+    text-align: center;
+    color: lightgray;
+}
+.review button{
+    width:100%;
+    height:50px;
+    border-style: dotted;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.review button:hover{
+    background-color: lightgreen;
+}
+p{
+    color: white;
+}
+nav{
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+/* .new-button{
+    background-color: black;
+    color: white;
+} */
+
+</style>
+<body>
+      <nav class="navbar navbar-expand-lg navbar-dark"+>
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">
+            <img src="./images/icon/mc.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Movie Collection
+            </a>
+            <button class="navbar-toggler new-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+            </ul>
+
+            <ul class="navbar-nav mr-auto mb-3 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Movie List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Contact us</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="topic col-lg-3 col-md-4 col-sm-6 border">
+                <img src="./images/malik.jpg" alt="">
+                <h2>Malik</h2>
+                <p>
+                    Malik is a 2021 Indian Malayalam-language political thriller film directed, written and edited by Mahesh Narayanan. The film stars Fahadh Faasil, Vinay Forrt, and Nimisha Sajayan in the lead roles, with Joju George, Dileesh Pothan, and Indrans playing supporting roles
+                </p>
+                <p><span>Initial release: </span>3 August 2021</p>
+                <p><span>Director: </span>Mahesh Narayanan</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+            <div class="topic col-lg-3 col-md-4 col-sm-6 border">
+                <img src="./images/cold-case.jpg" alt="">
+                <h2>Cold Case</h2>
+                <p>
+                    Cold Case is a 2021 Indian Malayalam-language crime thriller film directed by Tanu Balak and written by Sreenath V. Nath, that stars Prithviraj Sukumaran,Aditi Balan, Anil Nedumangad in the lead roles, Lakshmi Priyaa Chandramouli, Anand and Rajesh Hebbar in supporting roles.
+                </p>
+                <p><span>Initial release: </span>30 June 2021</p>
+                <p><span>Director: </span> Tanu Balak</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+            <div class="topic col-lg-3 col-md-4 col-sm-6 border">
+                <img src="./images/Nayattu.jpg" alt="">
+                <h2>Nayattu</h2>
+                <p>
+                    Nayattu is a 2021 Indian Malayalam-language political thriller film directed and co-produced by Martin Prakkat and written by Shahi Kabir. It stars Kunchako Boban, Joju George and Nimisha Sajayan in the lead roles and Jaffar Idukki, Anil and Hakkim Shajahan in supporting roles.
+                </p>
+                <p><span>Initial release: </span>8 April 2021</p>
+                <p><span>Director: </span>Martin Prakkat</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+
+            <div class="topic col-lg-3 col-md-4 col-sm-6 border">
+                <img src="./images/nizhal.jpg" alt="">
+                <h2>Nizhal</h2>
+                <p>
+                    Nizhal (transl. Shadow) is a 2021 Indian mystery thriller film directed by Appu N. Bhattathiri and written by S. Sanjeev. It stars Kunchacko Boban and Nayanthara and also features Izin Hash, Rony David, Saiju Kurup and Divya Prabha in supporting roles
+                </p>
+                <p><span>Initial release: </span>April 2021</p>
+                <p><span>Director: </span>Appu N. Bhattathiri</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+
+            <div class="topic col-lg-3 col-md-4 col-sm-6 mt-2 border">
+                <img src="./images/malik.jpg" alt="">
+                <h2>Malik</h2>
+                <p>
+                    Malik is a 2021 Indian Malayalam-language political thriller film directed, written and edited by Mahesh Narayanan. The film stars Fahadh Faasil, Vinay Forrt, and Nimisha Sajayan in the lead roles, with Joju George, Dileesh Pothan, and Indrans playing supporting roles
+                </p>
+                <p><span>Initial release: </span>3 August 2021 (India)</p>
+                <p><span>Director: </span>Mahesh Narayanan</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+            <div class="topic col-lg-3 col-md-4 col-sm-6 mt-2 border">
+                <img src="./images/cold-case.jpg" alt="">
+                <h2>Cold Case</h2>
+                <p>
+                    Cold Case is a 2021 Indian Malayalam-language crime thriller film directed by Tanu Balak and written by Sreenath V. Nath, that stars Prithviraj Sukumaran,Aditi Balan, Anil Nedumangad in the lead roles, Lakshmi Priyaa Chandramouli, Anand and Rajesh Hebbar in supporting roles.
+                </p>
+                <p><span>Initial release: </span>30 June 2021</p>
+                <p><span>Director: </span> Tanu Balak</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+            <div class="topic col-lg-3 col-md-4 col-sm-6 mt-2 border">
+                <img src="./images/Nayattu.jpg" alt="">
+                <h2>Nayattu</h2>
+                <p>
+                    Nayattu is a 2021 Indian Malayalam-language political thriller film directed and co-produced by Martin Prakkat and written by Shahi Kabir. It stars Kunchako Boban, Joju George and Nimisha Sajayan in the lead roles and Jaffar Idukki, Anil and Hakkim Shajahan in supporting roles.
+                </p>
+                <p><span>Initial release: </span>8 April 2021</p>
+                <p><span>Director: </span>Martin Prakkat</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+
+            <div class="topic col-lg-3 col-md-4 col-sm-6 mt-2 border">
+                <img src="./images/nizhal.jpg" alt="">
+                <h2>Nizhal</h2>
+                <p>
+                    Nizhal (transl. Shadow) is a 2021 Indian mystery thriller film directed by Appu N. Bhattathiri and written by S. Sanjeev. It stars Kunchacko Boban and Nayanthara and also features Izin Hash, Rony David, Saiju Kurup and Divya Prabha in supporting roles
+                </p>
+                <p><span>Initial release: </span>April 2021</p>
+                <p><span>Director: </span>Appu N. Bhattathiri</p>
+                <div class="review" style="text-align: center;">
+                    <button>
+                        Rating:3.5
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
