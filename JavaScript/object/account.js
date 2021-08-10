@@ -31,6 +31,14 @@ var datas=[
 
 // console.log(datas.filter(acc=>acc.acno==1000).map(acnt=>acnt.transactions).filter(accn=>accn.));
 
-datas.map(accnt=>accnt.transactions).forEach(acc=>acc.forEach(cr=>cr.to==1000?console.log(cr):''));
+// datas.map(accnt=>accnt.transactions).forEach(acc=>acc.forEach(cr=>cr.to==1000?console.log(cr):''));
+
+payment_history=[];
+
+datas.map(accnt=>accnt.transactions).forEach(acc=>acc.forEach(cr=>cr.to==1000?payment_history.push(cr):''));
+
+datas.filter(accnt=>accnt.acno==1000).map(accnt=>payment_history.push(accnt.transactions));
+
+console.log(payment_history);
 
 //payment history of 1001
