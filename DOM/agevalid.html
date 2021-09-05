@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Valid</title>
+</head>
+<body>
+    <input type="text" id="age">
+    <button onclick="val()">Validate Age</button>
+    <div id="section">
+
+    </div>
+</body>
+<script>
+    function val(){
+        let ag=age.value;
+        if(ag>=18){
+            section.innerHTML="<h2 style=color:green>Valid</h2>";
+        }
+        else{
+            section.innerHTML="<h2 style=color:red>In Valid</h2>"
+        }
+    }
+</script>
+</html>

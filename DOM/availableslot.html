@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <input type="text" id="search">
+        <button onclick="searchSlots()">Search By Vaccine</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 ">
+            <button class="btn btn-success" style="margin-left: 200px;" onclick="populate_data()">Get slot</button>
+            <table class="table table-bordered">
+                <tr>
+                    <td>Center Name</td>
+                    <td>Age Group</td>
+                    <td>Available Slot</td>
+                    <td>Vaccine</td>
+                </tr>
+                <tbody id="table_body">
+        
+                </tbody>
+            </table>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</body>
+<script>
+    var slots=[
+    {center:"phc",group:"18+",time:"9-1",vaccine:"co-vaxin"},
+    {center:"AIMS",group:"65+",time:"10-12",vaccine:"co-vaxin"},
+    {center:"aster",group:"18+",time:"1-3",vaccine:"co-vaxin"},
+    {center:"kims",group:"65+",time:"10-2",vaccine:"co-vaxin"},
+    {center:"PHC",group:"45+",time:"10-2",vaccine:"covishield"},
+    {center:"AIMS",group:"65+",time:"10-2",vaccine:"covishield"},
+    {center:"PHC",group:"18+",time:"10-2",vaccine:"sputnic"},
+    {center:"kims",group:"65+",time:"10-2",vaccine:"sputnic"}
+]
+
+function populate_data(){
+    body_data=""
+    for(let slot of slots){
+        body_data+=`<tr> <td> ${slot.center} </td> <td>${slot.group} </td>  <td>${slot.time} </td>  <td>${slot.vaccine} </td> </tr>`
+    }
+    table_body.innerHTML=body_data;
+}
+
+function populate_search_data(data){
+    body_data=""
+    for(let slot of data){
+        body_data+=`<tr> <td> ${slot.center} </td> <td>${slot.group} </td>  <td>${slot.time} </td>  <td>${slot.vaccine} </td> </tr>`
+    }
+    table_body.innerHTML=body_data;
+}
+
+function searchSlots(){
+    let vacc_name=search.value;
+    let data=slots.filter(slot=>slot.vaccine==vacc_name);
+    populate_search_data(data);
+}
+
+</script>
+</html>

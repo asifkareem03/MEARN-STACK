@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" style="margin-top: 20px;">
+            <input type="text" class="form-control" id="c_name">
+            <div style="text-align: center;">
+                <button class="btn btn-success mt-3" onclick="getcountry()">fetch Data</button>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" id="data" style="display: none; margin-left: 110px;">
+            <div class="card" style="width: 18rem;">
+                <img src="" class="card-img-top" id="country_flag" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="country_name"></h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="country_population"></li>
+                  <li class="list-group-item" id="country_currency"></li>
+                  <li class="list-group-item" id="currency_symbol"></li>
+                </ul>
+                <!-- <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div> -->
+              </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</body>
+
+<script>
+    function displayvalue(country_data){
+        let flag=country_data[0].flag;
+        let name=country_data[0].name;
+        let population=country_data[0].population;
+        let currency=country_data[0].currencies[0].name;
+        let symbol=country_data[0].currencies[0].symbol;
+
+        country_flag.src=flag;
+        country_name.innerHTML=name;
+        country_population.innerHTML=population;
+        country_currency.innerHTML=currency;
+        currency_symbol.innerHTML=symbol;
+
+        data.style.display="block";
+
+    }
+    function getcountry() {
+        // let country_name = c_name.value;
+        // let url = `https://restcountries.eu/rest/v2/name/${country_name}?fullText=true`;
+        // let request = new XMLHttpRequest();
+        // request.open("get", url);
+        // request.send();
+
+        // request.onreadystatechange = () => {
+        //     if (request.readyState == 4) {
+        //         if (request.status > 199 && request.status < 300) {
+        //             let c_data = JSON.parse(request.responseText)
+        //             displayvalue(c_data);
+        //             }
+        //         else {
+        //             console.log("Failed to fetch data");
+        //         }
+        //     }
+        // }
+        let country_name = c_name.value;
+        fetch( `https://restcountries.eu/rest/v2/name/${country_name}?fullText=true`).then(res=>res.json()).
+        then(data=>displayvalue(data)).catch(err=>alert(err));
+    }
+
+</script>
+
+</html>
